@@ -3,16 +3,16 @@ import os
 import random
 import string
 
-UPLOAD_DIR = "/content/"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
-class BaseController :
+class BaseController:
+    
     def __init__(self):
 
-     self.app_settings = get_settings()
-     self.base_dir = UPLOAD_DIR
-     self.files_dir = os.path.join(
+        self.app_settings = get_settings()
+        
+        self.base_dir = os.path.dirname( os.path.dirname(__file__) )
+        self.files_dir = os.path.join(
             self.base_dir,
-            "files"
+            "assets/files"
         )
         
     def generate_random_string(self, length: int=12):
