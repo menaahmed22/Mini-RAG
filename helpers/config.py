@@ -12,6 +12,8 @@ class Settings(BaseSettings):
   FILE_MAX_SIZE : int
   FILE_DEFAULT_CHUNK_SIZE: int
   ngrok_key :str
+  MONGODB_URL: str
+  MONGODB_DATABASE: str
 
   class config :
     env_file = "miniRAG.env"
